@@ -44,10 +44,9 @@ namespace IDA_C_sh_HomeWork
         
             int car_quantity = default(int);
 
-
-            _ = RaceGame.exe;
-
-           // RaceGame raceGame_obj = new RaceGame();
+            // Запускаем игру по старинке - через .ехе ))
+            RaceGame.exe();
+            // RaceGame raceGame_obj = new RaceGame();
 
 
 

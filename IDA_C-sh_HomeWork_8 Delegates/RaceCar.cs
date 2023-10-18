@@ -13,11 +13,8 @@ namespace IDA_C_sh_HomeWork
             MaxSpeed_ = 150;
             Weight_ = 2000;
             EnginePower_ = 400;
-            Textfield_ = "general RaceCar prototype";
+            Textfield_ = "RaceCar id: " + ID_;
         }
-        public override void Start(double distance)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
