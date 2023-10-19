@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IDA_C_sh_HomeWork
+namespace nmspRaceGame
 {
     internal class RaceCar : Vechile
     {
-        public RaceCar() 
+        public RaceCar()
         {
-            MaxSpeed_ = 150;
-            Weight_ = 2000;
+            MaxSpeed_ = 170;
+            Weight_ = 1500;
             EnginePower_ = 400;
-            Textfield_ = "RaceCar id: " + ID_;
-        }
-       
+            Textfield_ = "RaceCar";
+        }  
     }
 }

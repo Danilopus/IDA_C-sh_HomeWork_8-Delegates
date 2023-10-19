@@ -4,6 +4,7 @@ using Service;
 using System;
 using System.Linq.Expressions;
 using System.Text;
+using nmspRaceGame;
 
 /// QUESTIONS ///
 /// 1. 
@@ -40,17 +41,10 @@ namespace IDA_C_sh_HomeWork
         случайным образом. Победителем считается ав-
         томобиль, пришедший к финишу первым.*/
         { 
-            Console.WriteLine("\n***\t{0}\n\n", work_name); 
-        
-            int car_quantity = default(int);
+            Console.WriteLine(work_name);         
 
             // Запускаем игру по старинке - через .ехе ))
-            RaceGame.exe();
-            // RaceGame raceGame_obj = new RaceGame();
-
-
-
-
+            RaceGame.exe(GameSpeed.ultrafast_x_20);
 
 
         }
