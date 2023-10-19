@@ -78,7 +78,7 @@ namespace nmspRaceGame
             Console.Write("\n\n!!!GET READY!!! (press any key when ready)\n");
             Console.ReadKey();
             Console.Write("\n\nRace will start in: ");
-            //for (int i = 5; i >= 0; i--) { Console.Write("\b " + i); Thread.Sleep(1000); }
+            for (int i = 5; i >= 0; i--) { Console.Write("\b " + i); Thread.Sleep(1000); }
             Console.Clear();
             Console.Write("\nRACE STARTED!!!\n\n");
         }
@@ -99,8 +99,9 @@ namespace nmspRaceGame
                 foreach (var item in sorted_results)
                 {
                     Console.ForegroundColor = item.Key.Color_;
-                    Console.WriteLine("\n{0}\t{1}\t\tDistance: {2} km\n", ++i, item.Key, Math.Round(item.Value, 3));
+                    Console.Write("\n{0}\t{1}\t\t", ++i, item.Key );
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("Distance: {0} km\n", Math.Round(item.Value, 3));
                 }
             }
         }
