@@ -51,11 +51,13 @@ namespace nmspRaceGame
         }
         Vechile GetRandomVechile()
         {
-            switch((int)ServiceFunction.Get_Random(0,2.99))
+            switch((int)ServiceFunction.Get_Random(0,3.99))
             { 
                 case 0: return new MotoCycle();
                 case 1: return new RaceCar();
-                case 2: return new RaceTruck();                  
+                case 2: return new RaceTruck();
+                case 3: return new RaceBus();
+
             }
             throw new Exception("problem with RandomVechile");
 
@@ -97,7 +99,7 @@ namespace nmspRaceGame
                 foreach (var item in sorted_results)
                 {
                     Console.ForegroundColor = item.Key.Color_;
-                    Console.WriteLine("\n{0}\t{1}\tDistance: {2} km\n", ++i, item.Key, Math.Round(item.Value, 3));
+                    Console.WriteLine("\n{0}\t{1}\t\tDistance: {2} km\n", ++i, item.Key, Math.Round(item.Value, 3));
                     Console.ForegroundColor = ConsoleColor.White;
                 }
             }

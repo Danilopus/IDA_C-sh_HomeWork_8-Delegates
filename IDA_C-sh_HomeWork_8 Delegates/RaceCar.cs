@@ -12,7 +12,7 @@ namespace nmspRaceGame
         {
             MaxSpeed_ = 170;
             Weight_ = 1500;
-            EnginePower_ = 400;
+            EnginePower_ = 500;
             Textfield_ = "RaceCar";
         }  
     }
