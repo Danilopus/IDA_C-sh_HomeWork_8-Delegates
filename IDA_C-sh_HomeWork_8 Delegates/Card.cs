@@ -10,11 +10,11 @@ namespace nmspCardGame
     enum CardType { piki, spades, hearts, diamonds }
     internal class Card
     {
-        CardRate _rate;
-        CardType _type;
+        public CardRate Rate_ { set; get; }
+        public CardType _type { set; get; }
         public Card(KeyValuePair<CardRate, CardType> arg)
         {
-            _rate = arg.Key;
+            Rate_ = arg.Key;
             _type = arg.Value;
         }
 
