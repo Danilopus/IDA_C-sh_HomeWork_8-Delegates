@@ -99,14 +99,15 @@ namespace nmspRaceGame
                 foreach (var item in sorted_results)
                 {
                     Console.ForegroundColor = item.Key.Color_;
-                    Console.Write("\n{0}\t{1}\t\t", ++i, item.Key );
+                    Console.Write("\n{0}  {1}\t".PadRight(15), ++i, item.Key );
+                    Console.Write("Distance: {0} km\n".PadLeft(15), Math.Round(item.Value, 3));
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write("Distance: {0} km\n", Math.Round(item.Value, 3));
                 }
             }
         }
         void RaceHandler()
-        {            
+        {
+            Thread.Sleep(1500);
             while (_state)
             {
                 // добавляем 1 игровыую секунду
@@ -114,7 +115,7 @@ namespace nmspRaceGame
                 // Обсчитываем перемещение машин за 1 игровую секунду
                 RaceTicEvalute();
                 // Выводим отчет
-                RequestStatus(10); // параметр  - на сколько тиков выводить отчет;
+                if (_state) RequestStatus(1); // параметр  - на сколько тиков выводить отчет;
             }
         }
         class inGameTimer
@@ -173,6 +174,7 @@ namespace nmspRaceGame
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("And the winner is {0}!!!\r", vechile);
             }
+            Console.Write("And the winner is {0}!!!", vechile);
         }
         delegate bool CheckResult();
         //bool CheckResult_handler() { foreach (var result_record in _result_list) if (result_record.Value >= Distance_) return true; return false; }

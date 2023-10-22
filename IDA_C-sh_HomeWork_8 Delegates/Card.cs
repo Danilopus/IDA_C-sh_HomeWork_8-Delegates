@@ -17,6 +17,12 @@ namespace nmspCardGame
             Rate_ = arg.Key;
             _type = arg.Value;
         }
+        public Card(CardRate rate, CardType type)
+        {
+            Rate_ = rate;
+            _type = type;
+        }
+
 
     }
 }
